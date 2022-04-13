@@ -1,0 +1,33 @@
+<?php
+$data = $block->getEditData();
+?>
+
+<h1>Update Details</h1>
+
+<form action="<?= $block->getUrl('employee/employeecontroller/update').'?id='.$data['id'];  ?>" method="POST" enctype="multipart/form-data">
+  <label for="name">Enter Name:</label><br>
+  <input type="text" id="name" name="name" value="<?php echo $data['name']; ?>"><br><br>
+
+  <label for="email">Enter Email:</label><br>
+  <input type="text" id="email" name="email" value="<?php echo $data['email']; ?>"><br><br>
+
+
+  <label for="city">Enter City:</label><br>
+  <input type="text" id="city" name="city" value="<?php echo $data['city']; ?>"><br><br>
+
+  <label for="mobile">Mobile</label><br>
+  <input type="text" id="mobile" name="mobile" value="<?php echo $data['mobile']; ?>"><br><br>
+
+  <div class="container">
+  <label for="image">Choose a profile picture:</label><br><br>
+ 
+  <img src="<?php echo $block->getUrl().'pub/media/tmp/image/'. $data['image'];?>" height="50px" width="50px"/><br>
+  <input type="file" id="image" name="image" alt="No Image Found" value="<?php echo $data['image']; ?>"><br><br>
+</div>  
+
+  <input type="submit" value="update">
+
+</form>
+
+
+

@@ -1,0 +1,26 @@
+<h1>Employee listing</h1>
+
+
+
+<a href="<?php echo $block->getUrl('programs/samplecontroller/samp')?>">Add New</a>
+
+<?php  $data = $block->loadEmployeeCollection(); ?>
+
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Created Date</th>
+        <th>Action</th>
+    </tr>
+    <?php foreach ($data as $key => $emp) { ?>
+    
+        <tr>
+            <td><?php echo $emp['name']; ?></td>
+            <td><?php echo $emp['email']; ?></td>
+            <td><?php echo $emp['created_at']; ?></td>
+            
+        </tr>    
+    <?php }?>
+</table>

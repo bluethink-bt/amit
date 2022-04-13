@@ -1,0 +1,80 @@
+<?php
+namespace Programs\Program\Observer;
+class CustomSaveAfter implements \Magento\Framework\Event\ObserverInterface
+{
+
+	// public function __construct(
+	// 	\Magento\Framework\App\Action\Context $context,
+	// 	\Programs\Program\Model\Employee $employee
+	// 	)
+	// {
+	// 	$this->employee = $employee;
+	// 	return parent::__construct($context);
+	// }
+
+
+	public function execute(\Magento\Framework\Event\Observer $observer)
+	{
+		$model = $observer->getEvent()->getDataObject();
+		echo($model);die;
+		// $displayText = $observer->getData('mp_text');
+		// $displayText->employee->save();
+
+		// echo $displayText->getFirstname() . "</br>";
+		// echo $displayText->getLastname() . "</br>";
+		// $displayText->setText('Execute event successfully.');
+
+		return $this;
+	}
+}
+
+
+// namespace Programs\Program\Observer;
+// use Magento\Framework\Event\ObserverInterface;
+// class CustomSaveAfter implements ObserverInterface
+// {
+// 	protected $employee;
+// 	public function __construct(
+// 		\Magento\Framework\App\Action\Context $context,
+// 		\Programs\Program\Model\Employee $employee
+// 		)
+// 	{
+// 		$this->employee = $employee;
+// 		return parent::__construct($context);
+// 	}
+
+//     public function execute(\Magento\Framework\Event\Observer $observer)
+//     {
+//         try {
+//             // Get the model object from observer
+// 			// echo("dsfgd");die;
+// 			$displayText = $observer->getData('mp_text');
+// 			// echo($displayText);die;
+// 			echo $displayText->getFirstname() . "</br>";
+// 			// $model = $observer->getEvent();
+// 			// echo($model);die;
+//             // $model = $observer->getEvent()->getDataObject();
+			
+// 			// $model->$displayText->getFirstname();
+// 			// $model->save();
+
+
+// $model =  $displayText->getFirstname();
+// // echo($model);die;
+// $this->employee->setFirstname($model);
+// $this->employee->save(); 
+
+
+
+
+
+//             if ($model && $model->isObjectNew()) {
+//                 // perform some action if new model
+//             } else {
+//                 // perform some action if edit model
+//             }
+//         } catch (\Exception $e) {
+//         }
+//     }
+// }
+

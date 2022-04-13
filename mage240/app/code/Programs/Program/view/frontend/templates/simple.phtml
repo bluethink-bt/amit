@@ -1,0 +1,15 @@
+<h1>Employee Form</h1>
+
+
+<a href="<?php echo $block->getUrl('programs/samplecontroller3/samp3')?>">View All</a>
+<form action="<?= $block->getUrl('programs/samplecontroller2/samp2'); ?>" method="POST">
+  
+    <label for="name">Enter Your Name:</label>
+    <input type="text" id="name" name="name"><br><br>
+
+    <label for="email">Enter Your Email Address:</label>
+    <input type="text" id="email" name="email"><br><br>
+
+  <input type="submit" value="Submit">
+
+</form>

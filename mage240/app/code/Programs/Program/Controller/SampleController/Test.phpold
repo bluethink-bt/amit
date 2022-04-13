@@ -1,0 +1,16 @@
+<?php
+namespace Programs\Program\Controller\SampleController;
+
+class Test extends \Magento\Framework\App\Action\Action
+{
+
+	public function execute()
+	{
+		$textDisplay = new \Magento\Framework\DataObject(
+            array('firstname' => 'Amit', 'lastname' =>'Kumar'));
+		$this->_eventManager->dispatch('programs_program_employee_save_after', ['mp_text' => $textDisplay]);
+		echo $textDisplay->getText();
+		exit;
+	}
+}
+

@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="company_employee_my_event">
+        <observer name="company_employee_custom_event" instance="Company\Employee\Observer\MyEventObserver" />
+    </event>
+</config>

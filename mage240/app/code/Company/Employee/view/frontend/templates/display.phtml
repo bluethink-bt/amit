@@ -1,0 +1,29 @@
+<a href="<?php echo $block->getUrl('employee/employeecontroller/employee3')?>">View All</a>
+<h2 style="background-color:powderblue;color:blue;text-align:center;"><strong>Magento 2 CRUD Operations</strong></h2>
+
+
+<form action="<?= $block->getUrl('employee/employeecontroller/employee2'); ?>" method="POST" enctype="multipart/form-data">
+  <label for="name">Enter Name:</label><br>
+  <input type="text" id="name" name="name"><br><br>
+
+  <label for="email">Enter Email:</label><br>
+  <input type="text" id="email" name="email"><br><br>
+
+
+  <label for="city">Enter City:</label><br>
+  <input type="text" id="city" name="city"><br><br>
+
+  <label for="mobile">Mobile</label><br>
+  <input type="text" id="mobile" name="mobile"><br><br>
+
+  <label for="image">Choose a profile picture:</label><br><br>
+  <input type="file" id="image" name="image" alt="No Image Found"><br><br>
+
+  <input type="submit" value="Submit">
+
+</form>
+
+
+
+
+

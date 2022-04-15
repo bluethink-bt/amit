@@ -3,7 +3,6 @@
     <event name="customer_register_success">
         <observer name="customer_register" instance="Programs\Program\Observer\AddCustomerData" />
     </event>
-    
      <event name="checkout_onepage_controller_success_action">
         <observer name="programs_program_success_action" instance="Programs\Program\Observer\AfterPlaceOrder"  />
     </event>

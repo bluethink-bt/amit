@@ -16,6 +16,8 @@ check status: sudo php bin/magento module: status
 enable module: sudo php bin/magento module: enable Vendorname_Modulename
 To verify module is enable: sudo php bin/magento module:status Mageprince_Faq
 
+git password token: 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
+
 
 To Clear composer cache: $composer clear-cache
 To Import Third party module
